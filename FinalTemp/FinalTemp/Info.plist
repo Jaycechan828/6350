@@ -2,16 +2,16 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSLocationUsageDescription</key>
-	<string>Please allow location</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Please allow Photo Kibary access</string>
 	<key>NSCameraUsageDescription</key>
 	<string>Please allow using camera</string>
-	<key> Privacy - Location Always and When In Use Usage Description</key>
-	<string>Please allow always or when in location</string>
-	<key>NSLocationAlwaysUsageDescription</key>
+	<key>NSLocationUsageDescription</key>
 	<string>Please allow location</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Please allow always or when in location</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Please allow location when in use</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

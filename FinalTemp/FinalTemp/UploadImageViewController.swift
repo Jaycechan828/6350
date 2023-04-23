@@ -10,11 +10,14 @@ import CoreLocation
 
 class UploadImageViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate, CLLocationManagerDelegate {
     
-    @IBOutlet weak var imgView: UIImageView!
+//    @IBOutlet weak var imgView: UIImageView!
     
+//    @IBOutlet weak var txtTitle: UITextField!
+//    @IBOutlet weak var lblLocation: UILabel!
+    
+    @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var txtTitle: UITextField!
     @IBOutlet weak var lblLocation: UILabel!
-    
     let locationManager = CLLocationManager()
     
     var uploadProtocol: UploadImageProtocol?
@@ -24,8 +27,7 @@ class UploadImageViewController: UIViewController, UIImagePickerControllerDelega
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-       
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -37,14 +39,34 @@ class UploadImageViewController: UIViewController, UIImagePickerControllerDelega
         
         uploadProtocol?.uploadedImageDelegate(img: img, locationImg: location, titleImg: title)
         self.tabBarController?.selectedIndex = 0
-                
-//                let imageData: Data? = img.pngData()
-//
-//                let imgData: InstaImageCelldata = InstaImageCelldata()
-//                imgData.title = title
-//                imgData.location = location
-//                imgData.Image = imageData
+        
+        //                let imageData: Data? = img.pngData()
+        //
+        //                let imgData: InstaImageCelldata = InstaImageCelldata()
+        //                imgData.title = title
+        //                imgData.location = location
+        //                imgData.Image = imageData
     }
+    
+    @IBAction func getLocation(_ sender: Any) {
+        locationManager.requestLocation()
+    }
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error)
+    }
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = locations.last else {return}
+        
+        let lat = location.coordinate.latitude
+        let lng = location.coordinate.longitude
+        
+        lblLocation.text = "Location: \(lat) \(lng)"
+    }
+    
+    
+    
+    
+    
     
     @IBAction func takeAPictureAction(_ sender: Any) {
         let actionSheet = UIAlertController(title: "Take a picture", message: "Something", preferredStyle: .alert)
@@ -85,54 +107,5 @@ class UploadImageViewController: UIViewController, UIImagePickerControllerDelega
             imgView.image = image
         }
         picker.dismiss(animated: true)
-    }
-    
-    @IBAction func getLocation(_ sender: Any) {
-        
-    }
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error){
-        print(error)
-    }
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.last else {return}
-        getAddressFromLocation(location: location) {
-            address in
-            if let address = address{
-                print(address)
-                self.lblLocation.text = "\(address)"
-            } else{
-                print("Unable to retrieve address.")
-            }
-        }
-//        let lat = location.coordinate.latitude
-//        let lng = location.coordinate.longitude
-//        lblLocation.text = "Location: \(lat)"
-    }
-    func getAddressFromLocation(location: CLLocation, completion: @escaping (String?) -> Void){
-        let geoCoder = CLGeocoder()
-        
-        geoCoder.reverseGeocodeLocation(location) {
-            placemarks, error in
-            if error != nil{
-                print(error as Any)
-                completion(nil)
-                return
-            }
-            var address = ""
-            guard let place = placemarks?.first else{
-                completion(nil)
-                return
-            }
-            if place.name != nil{
-                address += place.name! + ", "
-            }
-            if place.locality != nil{
-                address += place.locality! + ", "
-            }
-            if place.subLocality != nil {
-                address += place.subLocality!
-            }
-            completion(address)
-        }
     }
 }

@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2c-4n-0HZ">
-                                <rect key="frame" x="157" y="644" width="79" height="35"/>
+                                <rect key="frame" x="157" y="692" width="79" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Upload"/>
@@ -26,7 +26,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4sG-tb-p61">
-                                <rect key="frame" x="145" y="577" width="103" height="35"/>
+                                <rect key="frame" x="56" y="630" width="280" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Take A Pic"/>
@@ -45,18 +45,17 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDb-p3-gGg">
-                                <rect key="frame" x="54" y="534" width="287" height="35"/>
+                                <rect key="frame" x="22" y="537" width="349" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Get Location"/>
                                 <connections>
-                                    <action selector="getLocation:" destination="92h-XY-seM" eventType="touchUpInside" id="oez-d5-3Ba"/>
+                                    <action selector="getLocation:" destination="92h-XY-seM" eventType="touchUpInside" id="SdF-k0-2cw"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUt-8g-YRx" userLabel="lbl Location">
-                                <rect key="frame" x="12" y="482" width="370" height="44"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUt-8g-YRx">
+                                <rect key="frame" x="63" y="469" width="267" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" identifier="Location"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -67,14 +66,14 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="upload image" selectedImage="camera.fill" catalog="system" id="2Yo-Ec-c1f"/>
                     <connections>
-                        <outlet property="imgView" destination="Wcj-46-sdN" id="dHA-ic-CYX"/>
-                        <outlet property="lblLocation" destination="FUt-8g-YRx" id="HeZ-QQ-1sd"/>
-                        <outlet property="txtTitle" destination="v9r-M8-wd2" id="fV2-fM-86x"/>
+                        <outlet property="imgView" destination="Wcj-46-sdN" id="LTq-GQ-Y5k"/>
+                        <outlet property="lblLocation" destination="FUt-8g-YRx" id="GjG-e7-e41"/>
+                        <outlet property="txtTitle" destination="v9r-M8-wd2" id="8fG-Cf-jdI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YIK-zd-kOZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="446.56488549618319" y="130.98591549295776"/>
+            <point key="canvasLocation" x="446.56488549618319" y="198.59154929577466"/>
         </scene>
         <!--Profile-->
         <scene sceneID="API-3z-4mk">
@@ -114,17 +113,17 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="710"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="D3c-WV-3yO" customClass="HomeTableViewCell" customModule="FinalTemp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="nWs-6C-ImE">
                                         <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="D3c-WV-3yO" id="I1J-YL-lz8">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nWs-6C-ImE" id="luT-da-hBX">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="Ne8-Fa-ZrH" id="ePy-9N-BK3"/>
+                                    <outlet property="dataSource" destination="Ne8-Fa-ZrH" id="3Hy-by-Ldc"/>
                                     <outlet property="delegate" destination="Ne8-Fa-ZrH" id="DdD-fH-Feg"/>
                                 </connections>
                             </tableView>
@@ -139,15 +138,18 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" selectedImage="house.fill" catalog="system" id="QJd-Ys-UkR"/>
+                    <connections>
+                        <outlet property="tblView" destination="Axr-Eh-Unr" id="n1U-CM-3y6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UgT-UD-01b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="448" y="-476"/>
+            <point key="canvasLocation" x="446.56488549618319" y="-476.05633802816902"/>
         </scene>
         <!--Final-->
         <scene sceneID="G7k-vo-w3e">
             <objects>
-                <tabBarController title="Final" id="MKJ-RX-PA9" sceneMemberID="viewController">
+                <tabBarController title="Final" id="MKJ-RX-PA9" customClass="TabBarViewController" customModule="FinalTemp" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="c61-aH-Wlr">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

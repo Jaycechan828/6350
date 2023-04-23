@@ -13,11 +13,11 @@
 		E954397929F48926003B5812 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E954397829F48926003B5812 /* Assets.xcassets */; };
 		E954397C29F48926003B5812 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E954397A29F48926003B5812 /* LaunchScreen.storyboard */; };
 		E954398629F4924B003B5812 /* UploadImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E954398529F4924B003B5812 /* UploadImageViewController.swift */; };
-		E954398D29F49532003B5812 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E954398B29F49532003B5812 /* HomeTableViewCell.swift */; };
-		E954398E29F49532003B5812 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E954398C29F49532003B5812 /* HomeTableViewCell.xib */; };
 		E954399229F49A4E003B5812 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E954399129F49A4E003B5812 /* HomeViewController.swift */; };
 		E95439B629F4A337003B5812 /* UploadImageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95439B529F4A337003B5812 /* UploadImageProtocol.swift */; };
 		E95439BA29F4AD6D003B5812 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95439B929F4AD6D003B5812 /* TabBarViewController.swift */; };
+		E99CF81D29F53304005B0CB0 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99CF81B29F53304005B0CB0 /* TableViewCell.swift */; };
+		E99CF81E29F53304005B0CB0 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E99CF81C29F53304005B0CB0 /* TableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,11 +29,11 @@
 		E954397B29F48926003B5812 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E954397D29F48926003B5812 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E954398529F4924B003B5812 /* UploadImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageViewController.swift; sourceTree = "<group>"; };
-		E954398B29F49532003B5812 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
-		E954398C29F49532003B5812 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		E954399129F49A4E003B5812 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E95439B529F4A337003B5812 /* UploadImageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageProtocol.swift; sourceTree = "<group>"; };
 		E95439B929F4AD6D003B5812 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		E99CF81B29F53304005B0CB0 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		E99CF81C29F53304005B0CB0 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,11 +73,11 @@
 				E954397A29F48926003B5812 /* LaunchScreen.storyboard */,
 				E954397D29F48926003B5812 /* Info.plist */,
 				E954398529F4924B003B5812 /* UploadImageViewController.swift */,
-				E954398B29F49532003B5812 /* HomeTableViewCell.swift */,
-				E954398C29F49532003B5812 /* HomeTableViewCell.xib */,
 				E954399129F49A4E003B5812 /* HomeViewController.swift */,
 				E95439B529F4A337003B5812 /* UploadImageProtocol.swift */,
 				E95439B929F4AD6D003B5812 /* TabBarViewController.swift */,
+				E99CF81B29F53304005B0CB0 /* TableViewCell.swift */,
+				E99CF81C29F53304005B0CB0 /* TableViewCell.xib */,
 			);
 			path = FinalTemp;
 			sourceTree = "<group>";
@@ -141,8 +141,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E954397C29F48926003B5812 /* LaunchScreen.storyboard in Resources */,
+				E99CF81E29F53304005B0CB0 /* TableViewCell.xib in Resources */,
 				E954397929F48926003B5812 /* Assets.xcassets in Resources */,
-				E954398E29F49532003B5812 /* HomeTableViewCell.xib in Resources */,
 				E954397729F48924003B5812 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,9 +155,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E954399229F49A4E003B5812 /* HomeViewController.swift in Sources */,
+				E99CF81D29F53304005B0CB0 /* TableViewCell.swift in Sources */,
 				E954397029F48924003B5812 /* AppDelegate.swift in Sources */,
 				E954398629F4924B003B5812 /* UploadImageViewController.swift in Sources */,
-				E954398D29F49532003B5812 /* HomeTableViewCell.swift in Sources */,
 				E95439BA29F4AD6D003B5812 /* TabBarViewController.swift in Sources */,
 				E95439B629F4A337003B5812 /* UploadImageProtocol.swift in Sources */,
 				E954397229F48924003B5812 /* SceneDelegate.swift in Sources */,

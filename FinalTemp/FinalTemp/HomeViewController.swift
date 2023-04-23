@@ -12,8 +12,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     var locations = [String]()
     var imageTitles : [String] = [String]()
     
-    
     @IBOutlet weak var tblView: UITableView!
+    
     var uploadImageVC : UIViewController?
         
     override func viewDidLoad() {
@@ -24,13 +24,15 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            imageTitles.count
+            return imageTitles.count
         }
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-            cell.textLabel?.text = imageTitles[indexPath.row]
-            return cell
+            let cell = Bundle.main.loadNibNamed("TableViewCell", owner: self)?.first as! TableViewCell
+                    cell.imageContainer.image = images[indexPath.row]
+                    cell.lblTitle.text = imageTitles[indexPath.row]
+                    cell.lblLocation.text = locations[indexPath.row]
+                    return cell
         }
         
         
